@@ -1,11 +1,7 @@
 
-// ==========================================
 // SERVICIO DE CONEXIÓN CON CONALTURA
-// ==========================================
 
-// ==========================================
 // VALIDAR RESPUESTAS DE LA API
-// ==========================================
 
 async function validarRespuesta(respuesta) {
     if (!respuesta.ok) {
@@ -33,9 +29,7 @@ async function validarRespuesta(respuesta) {
 }
 
 
-// ==========================================
 // CONSULTAR UNA PÁGINA DE INMUEBLES
-// ==========================================
 
 async function obtenerInmuebles(pagina = 1, porPagina = 50) {
     try {
@@ -67,9 +61,7 @@ async function obtenerInmuebles(pagina = 1, porPagina = 50) {
 }
 
 
-// ==========================================
 // CONSULTAR TODOS LOS INMUEBLES
-// ==========================================
 
 async function obtenerTodosLosInmuebles() {
     const primeraRespuesta = await obtenerInmuebles(1, 50);
@@ -88,9 +80,7 @@ async function obtenerTodosLosInmuebles() {
 }
 
 
-// ==========================================
 // CONSULTAR CIUDADES
-// ==========================================
 
 async function obtenerCiudades() {
     try {
@@ -119,9 +109,7 @@ async function obtenerCiudades() {
 }
 
 
-// ==========================================
 // OBTENER DETALLE DE UN INMUEBLE
-// ==========================================
 
 async function obtenerDetalleInmueble(id) {
     try {

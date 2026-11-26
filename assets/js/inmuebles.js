@@ -1,13 +1,11 @@
 
 /**
- * Funciones encargadas de mostrar los inmuebles
- * en la interfaz de usuario.
+  Funciones encargadas de mostrar los inmuebles
+  en la interfaz de usuario.
  */
 
 
-// ==========================================
 // FORMATEAR PRECIOS EN PESOS COLOMBIANOS
-// ==========================================
 
 function formatearPrecio(precio) {
 
@@ -20,9 +18,7 @@ function formatearPrecio(precio) {
 }
 
 
-// ==========================================
 // CREAR UNA TARJETA DE INMUEBLE
-// ==========================================
 
 function crearTarjetaInmueble(inmueble) {
 
@@ -41,7 +37,7 @@ function crearTarjetaInmueble(inmueble) {
 
     imagen.className = "card-img-top inmueble-imagen";
 
-    imagen.src = inmueble.foto_principal || "assets/img/sin-imagen.svg";
+    imagen.src = inmueble.foto_principal || "assets/img/sin-imagen.jpg";
 
     imagen.alt = inmueble.titulo || "Inmueble";
 
@@ -49,7 +45,7 @@ function crearTarjetaInmueble(inmueble) {
 
         this.onerror = null;
 
-        this.src = "assets/img/sin-imagen.svg";
+        this.src = "assets/img/sin-imagen.jpg";
 
     };
 
@@ -158,9 +154,7 @@ function crearTarjetaInmueble(inmueble) {
 }
 
 
-// ==========================================
 // MOSTRAR LOS INMUEBLES EN PANTALLA
-// ==========================================
 
 function mostrarInmuebles(inmuebles) {
 
@@ -202,14 +196,14 @@ function mostrarInmuebles(inmuebles) {
 }
 
 
-/* ==========================================
+/* 
    MOSTRAR DETALLE DEL INMUEBLE
-========================================== */
+ */
 
 
-/* ==========================================
-   MOSTRAR DETALLE DEL INMUEBLE
-========================================== */
+
+//    MOSTRAR DETALLE DEL INMUEBLE
+
 
 async function verDetalleInmueble(id) {
 
@@ -265,9 +259,7 @@ async function verDetalleInmueble(id) {
 
 
 
-        // ======================================
         // GALERÍA PROFESIONAL DE FOTOGRAFÍAS
-        // ======================================
 
         const columnaFotos = document.createElement("div");
         columnaFotos.className = "col-12 col-lg-7";
@@ -294,11 +286,11 @@ async function verDetalleInmueble(id) {
 
         imagenPrincipal.alt = "Fotografía del inmueble";
 
-        imagenPrincipal.src = fotos[0] || "assets/img/sin-imagen.svg";
+        imagenPrincipal.src = fotos[0] || "assets/img/sin-imagen.jpg";
 
         imagenPrincipal.onerror = function () {
             this.onerror = null;
-            this.src = "assets/img/sin-imagen.svg";
+            this.src = "assets/img/sin-imagen.jpg";
         };
 
         // Contador de fotografías
@@ -358,7 +350,7 @@ async function verDetalleInmueble(id) {
 
             imagenPrincipal.onerror = function () {
                 this.onerror = null;
-                this.src = "assets/img/sin-imagen.svg";
+                this.src = "assets/img/sin-imagen.jpg";
             };
 
             // Actualizar miniaturas activas
@@ -406,7 +398,7 @@ async function verDetalleInmueble(id) {
 
             imagenMiniatura.onerror = function () {
                 this.onerror = null;
-                this.src = "assets/img/sin-imagen.svg";
+                this.src = "assets/img/sin-imagen.jpg";
             };
 
             miniatura.appendChild(imagenMiniatura);
@@ -447,9 +439,7 @@ async function verDetalleInmueble(id) {
         columnaFotos.appendChild(galeria);
 
 
-        // ======================================
         // INFORMACIÓN DEL INMUEBLE
-        // ======================================
 
         const columnaInfo = document.createElement("div");
 
@@ -567,9 +557,7 @@ async function verDetalleInmueble(id) {
         );
 
 
-        // ======================================
         // UNIR INFORMACIÓN DEL INMUEBLE
-        // ======================================
 
         columnaInfo.append(
             operacion,
@@ -579,18 +567,14 @@ async function verDetalleInmueble(id) {
             caracteristicas
         );
 
-        // ======================================
         // MOSTRAR GALERÍA E INFORMACIÓN
-        // ======================================
 
         fila.append(
             columnaFotos,
             columnaInfo
         );
 
-        // ======================================
         // AGREGAR DESCRIPCIÓN DEBAJO
-        // ======================================
 
         contenido.append(
             fila,

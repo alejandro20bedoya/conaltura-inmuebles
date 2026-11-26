@@ -1,7 +1,5 @@
 
-// ==========================================
 // NORMALIZAR TEXTO
-// ==========================================
 
 function normalizarTexto(texto) {
     return String(texto ?? "")
@@ -12,9 +10,7 @@ function normalizarTexto(texto) {
 }
 
 
-// ==========================================
 // FORMATEAR PRECIOS COLOMBIANOS
-// ==========================================
 
 function formatearPrecioInput(valor) {
     const numeros = String(valor).replace(/\D/g, "");
@@ -27,9 +23,7 @@ function formatearPrecioInput(valor) {
 }
 
 
-// ==========================================
 // OBTENER PRECIO NUMÉRICO
-// ==========================================
 
 function obtenerPrecioNumerico(valor) {
     const numeros = String(valor ?? "").replace(/\D/g, "");
@@ -38,9 +32,7 @@ function obtenerPrecioNumerico(valor) {
 }
 
 
-// ==========================================
 // APLICAR TODOS LOS FILTROS
-// ==========================================
 
 function aplicarFiltros() {
 
@@ -154,15 +146,11 @@ function aplicarFiltros() {
 }
 
 
-// ==========================================
 // INICIALIZAR EVENTOS DE LOS FILTROS
-// ==========================================
 
 function inicializarEventosFiltros() {
 
-    // --------------------------------------
     // OPERACIÓN: TODOS, VENTA Y ARRIENDO
-    // --------------------------------------
 
     document.querySelectorAll(".btn-operacion").forEach(boton => {
 
@@ -183,9 +171,7 @@ function inicializarEventosFiltros() {
     });
 
 
-    // --------------------------------------
     // TIPO DE INMUEBLE
-    // --------------------------------------
 
     const filtroTipo = document.getElementById("filtroTipo");
 
@@ -213,9 +199,7 @@ function inicializarEventosFiltros() {
         });
     }
 
-    // --------------------------------------
     // PRECIOS: FORMATO COLOMBIANO
-    // --------------------------------------
 
     const campoPrecioMinimo =
         document.getElementById("precioMinimo");

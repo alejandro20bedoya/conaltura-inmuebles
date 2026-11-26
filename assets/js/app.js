@@ -1,7 +1,5 @@
 
-// ==========================================
 // VARIABLES GLOBALES
-// ==========================================
 
 let listaInmuebles = [];
 let inmueblesFiltrados = [];
@@ -20,9 +18,7 @@ let filtrosActuales = {
 };
 
 
-// ==========================================
 // MOSTRAR ESTADOS Y MENSAJES
-// ==========================================
 
 function mostrarEstado(mensaje, tipo = "info", permitirReintento = false) {
     const estado = document.getElementById("estadoAplicacion");
@@ -54,9 +50,7 @@ function mostrarEstado(mensaje, tipo = "info", permitirReintento = false) {
 }
 
 
-// ==========================================
 // ERROR AL CARGAR CIUDADES
-// ==========================================
 
 function mostrarErrorCiudades() {
     mostrarEstado(
@@ -67,9 +61,7 @@ function mostrarErrorCiudades() {
 }
 
 
-// ==========================================
 // CARGAR CIUDADES DESDE LA API
-// ==========================================
 
 async function cargarCiudades() {
     const selector = document.getElementById("filtroCiudad");
@@ -117,9 +109,7 @@ async function cargarCiudades() {
 }
 
 
-// ==========================================
 // INICIAR APLICACIÓN
-// ==========================================
 
 async function iniciarAplicacion() {
     try {
@@ -154,8 +144,6 @@ async function iniciarAplicacion() {
 }
 
 
-// ==========================================
 // EJECUTAR APLICACIÓN
-// ==========================================
 
 iniciarAplicacion();
